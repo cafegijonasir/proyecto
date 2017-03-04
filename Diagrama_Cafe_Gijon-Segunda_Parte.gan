@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2016-11-01" view-index="0" gantt-divider-location="770" resource-divider-location="531" version="2.8.1" locale="es">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2016-11-01" view-index="1" gantt-divider-location="770" resource-divider-location="531" version="2.8.1" locale="es">
     <description/>
     <view zooming-state="default:10" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="424" order="0"/>
@@ -70,19 +70,19 @@
             <task id="169" name="DHCP y DNS de soporte en Windows 2012 R2" color="#8cb6ce" meeting="false" start="2016-10-31" duration="35" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             <task id="179" name="DHCP y DNS de soporte en openSUSE" color="#8cb6ce" meeting="false" start="2016-10-31" duration="35" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
         </task>
-        <task id="37" name="Segunda parte" color="#3366ff" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true">
-            <task id="39" name="Configuración de acceso remoto seguro" color="#006600" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
-            <task id="44" name="Establecimiento del servidor web" color="#6600ff" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
-            <task id="47" name="Creacion de aplicaciones web" color="#0000cc" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
-            <task id="191" name="Reconfiguración del DHCP Filover" color="#00cccc" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
-            <task id="193" name="Reconfiguración del DNS Secundario" color="#00cccc" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+        <task id="37" name="Segunda parte" color="#3366ff" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="false">
+            <task id="39" name="Configuración de acceso remoto seguro" color="#006600" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+            <task id="44" name="Establecimiento del servidor web" color="#6600ff" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+            <task id="47" name="Creacion de aplicaciones web" color="#0000cc" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+            <task id="202" name="Reconfiguración del DNS Secundario" color="#0000cc" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
+            <task id="198" name="Reconfiguración del DHCP Filover" color="#00cccc" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+            <task id="224" name="Realización del servicio FTP" color="#00cccc" meeting="false" start="2016-12-19" duration="35" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
         </task>
-        <task id="188" name="Tercera parte" color="#6600ff" meeting="false" start="2017-02-20" duration="30" complete="0" thirdDate="2017-02-20" thirdDate-constraint="1" expand="false" cost-manual-value="0.0" cost-calculated="true">
-            <task id="53" name="Servidor de mensajeria instantánea" color="#0000cc" meeting="false" start="2017-02-20" duration="30" complete="0" thirdDate="2017-02-20" thirdDate-constraint="1" expand="true"/>
-            <task id="59" name="Servidor de audio y video (Servidor Streaming)" color="#006600" meeting="false" start="2017-02-20" duration="30" complete="0" thirdDate="2017-02-20" thirdDate-constraint="1" expand="true"/>
-            <task id="62" name="Centralita de voz IP" color="#ffff00" meeting="false" start="2017-02-20" duration="30" complete="0" thirdDate="2017-02-20" thirdDate-constraint="1" expand="true"/>
-            <task id="51" name="Servidor de correo electrónico y mejoras" color="#6600ff" meeting="false" start="2017-02-20" duration="29" complete="0" thirdDate="2017-02-20" thirdDate-constraint="1" expand="true"/>
-            <task id="189" name="Realización del servicio FTP" color="#00cccc" meeting="false" start="2016-12-19" duration="45" complete="0" thirdDate="2016-12-19" thirdDate-constraint="1" expand="true"/>
+        <task id="188" name="Tercera parte" color="#6600ff" meeting="false" start="2017-02-06" duration="30" complete="0" thirdDate="2017-02-05" thirdDate-constraint="1" expand="false" cost-manual-value="0.0" cost-calculated="true">
+            <task id="53" name="Servidor de mensajeria instantánea" color="#0000cc" meeting="false" start="2017-02-06" duration="30" complete="0" thirdDate="2017-02-06" thirdDate-constraint="1" expand="true"/>
+            <task id="59" name="Servidor de audio y video (Servidor Streaming)" color="#006600" meeting="false" start="2017-02-06" duration="30" complete="0" thirdDate="2017-02-06" thirdDate-constraint="1" expand="true"/>
+            <task id="62" name="Centralita de voz IP" color="#ffff00" meeting="false" start="2017-02-06" duration="30" complete="0" thirdDate="2017-02-06" thirdDate-constraint="1" expand="true"/>
+            <task id="51" name="Servidor de correo electrónico y mejoras" color="#6600ff" meeting="false" start="2017-02-06" duration="29" complete="0" thirdDate="2017-02-06" thirdDate-constraint="1" expand="true"/>
         </task>
     </tasks>
     <resources>
@@ -107,9 +107,7 @@
         <allocation task-id="30" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="159" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="33" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="188" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="191" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="193" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="198" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="0" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="1" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="26" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
@@ -122,7 +120,7 @@
         <allocation task-id="29" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="30" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="162" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="193" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="202" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="3" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="13" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
@@ -135,7 +133,7 @@
         <allocation task-id="152" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="44" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="47" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
-        <allocation task-id="189" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="224" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="1" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="2" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="26" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
@@ -146,7 +144,7 @@
         <allocation task-id="29" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="30" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="169" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="189" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="224" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="1" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="26" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="39" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
@@ -162,7 +160,7 @@
         <allocation task-id="32" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="33" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="179" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
-        <allocation task-id="193" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="202" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
