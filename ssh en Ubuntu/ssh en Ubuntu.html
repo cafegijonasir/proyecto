@@ -1,0 +1,54 @@
+<h1>Ubuntu Server</h1>
+<p>Siguiendo los sucesivos pasos vamos a instalar un servidor SSH en Ubuntu Server, mostraremos como se realiza configurándolo en la maquina 172.16.10.5 que acoge el servidor FTP, y del mismo lo haremos para la 172.16.10.4 que incorpora el servidor y las aplicaciones web, como podemos ver en el apartado de comprobaciones. </p>
+<h2>INSTALACION/CONFIGURACIÓN</h2>
+<ul>
+<li>Instalamos el <strong>servidor</strong> de SSH en Ubuntu Server. <strong>Sudo apt-get install openssh-server</strong>      <strong>IMAGEN 1</strong></li>
+<li>Instalamos SSH en el <strong>cliente</strong>, en este caso un Centos 7. <strong>IMAGEN 2</strong></li>
+<li>Generamos en el <strong>cliente</strong> un par de claves, pública y privada. <strong>Ssh-keygen.</strong>  <strong>IMAGEN 3</strong></li>
+<li>Copiamos la clave pública del cliente (Centos) en el servidor de Ubuntu Server, indicando el usuario y su IP. <strong>Ssh-copy-id -i~/.ssh/id_rsa.pub administrador@172.16.10.5</strong>   <strong>IMAGEN 4</strong></li>
+</ul>
+<p>Ahora vamos a configurar SSH para podernos conectar a Ubuntu Server con <strong>otro cliente</strong>, que será Debian Router.</p>
+<ul>
+<li>Lo primero es instalar ssh si no lo tiene instalado. <strong>Apt-get install ssh</strong>  <strong>IMAGEN 5</strong></li>
+<li>Generamos en el cliente un par de claves, pública y privada. <strong>Ssh-keygen –t rsa.</strong>   <strong>IMAGEN 6</strong></li>
+<li>Copiamos la clave pública del cliente (DebianRouter) en el servidor de Ubuntu Server, indicando el usuario y su IP. <strong>Ssh-copy-id -i~/.ssh/id_rsa.pub administrador@172.16.10.5</strong>  <strong>IMAGEN 7</strong></li>
+<li>
+<p>Modificamos la configuración de algunos parámetros del fichero <strong>/etc/ssh/sshd_config</strong> para aumentar la seguridad.</p>
+<ul>
+<li><strong>Port:</strong> por defecto ssh usaría el puerto 22, pero nosotros le vamos a cambiar por el 2210.</li>
+<li><strong>Protocol:</strong> Des comentamos la línea de protocol 2 para confirmar que es este el que va a usar.</li>
+<li><strong>LoginGraceTime:</strong> Es el tiempo que la pantalla estará en espera para que el usuario introduzca su contraseña.</li>
+<li><strong>PermitRootLogin no:</strong> para negar el acceso por SSH al usuario Root.</li>
+<li><strong>MaxAuthTries:</strong> indica el número de veces que son permitidos los fallos de contraseña antes de ser desconectados.</li>
+<li><strong>MaxStartups:</strong> Se refiere al número de pantallas de login permitidas o conexiones provenientes de la misma IP con la que deseamos conectarnos.  <strong>IMAGEN 8 Y 9</strong></li>
+</ul>
+</li>
+<li>
+<p>Reiniciamos el servidor para aplicar los cambios realizados. <strong>Sudo service ssh stop/start</strong>.  <strong>IMAGEN 10</strong></p>
+</li>
+<li>Ahora para poder conectarnos <strong>desde fuera de nuestra red</strong>, configuramos en debian router el fichero <strong>/etc/network/interfaces</strong>, para que redirija el tráfico, todo lo que llegue a la IP publica del Debian router por el puerto 2210 será reenviado al puerto 2210 de la maquina 172.16.10.5. Todo lo que le llegue al puerto 2213 a través de su IP pública será enviado al puerto 2213 del Ubuntu Server 172.16.10.4   <strong>IMAGEN 11</strong></li>
+</ul>
+<h2>COMPROBACIONES</h2>
+<h3>Ubuntu Sever (172.16.10.5)</h3>
+<ul>
+<li>
+<p>Podemos conectarnos sin necesidad de introducir usuario y contraseña, dado que el acceso está configurado para logarse mediante clave pública. Únicamente deberemos introducir el usuario, la IP y el puerto.</p>
+<ul>
+<li>Nos conectarnos desde el Centos de nuestra red. <strong>IMAGEN 12</strong></li>
+<li>Nos conectamos desde Debian Router. <strong>IMAGEN 13</strong></li>
+<li>Desde cualquier equipo de <strong>fuera de nuestra red</strong> también podemos conectarnos indicando la IP pública y el puerto de DebianRouter, que se encarga de redirigir el tráfico hasta el servidor que hay en la 172.16.10.5:2210  <strong>IMAGEN 14</strong></li>
+<li>Al conectarnos debemos comprobar que la clave pública que nos envía es realmente la de nuestro servidor, después tenemos que introducir usuario y contraseña y ya tendremos acceso remoto a nuestro servidor desde cualquier máquina de internet. <strong>IMAGEN 15 y 16</strong></li>
+</ul>
+</li>
+</ul>
+<h3>Ubuntu Server (172.16.10.4)</h3>
+<ul>
+<li>
+Podemos conectarnos sin necesidad de introducir usuario y contraseña, dado que el acceso está configurado para logarse mediante clave pública. Únicamente deberemos introducir el usuario, la IP y el puerto.
+<ul>
+<li>Nos conectarnos desde el Centos de nuestra red. <strong>IMAGEN 17 y 18</strong></li>
+<li>Desde cualquier equipo de fuera de nuestra red también podemos conectarnos indicando la IP pública y el puerto de DebianRouter, que se encarga de redirigir el tráfico hasta el servidor que hay en la 172.16.10.4:2213 <strong>IMAGEN 19</strong></li>
+<li>Al conectarnos debemos comprobar que la clave pública que nos envía es realmente la de nuestro servidor, después tenemos que introducir usuario y contraseña y ya tendremos acceso remoto a nuestro servidor desde cualquier máquina de internet.  <strong>IMAGEN 20 y 21</strong></li>
+</ul>
+</li>
+</ul>
