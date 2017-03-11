@@ -1,0 +1,33 @@
+<h1>Servidor streaming Video</h1>
+<h2>Instalacion/Configuración</h2>
+<ul>
+<li>Instalamos el paquete de icecast con un <strong>sudo apt-get install icecast2.</strong> <strong>IMAGEN1</strong></li>
+<li>Damos a <strong>no</strong>, para configurarlo posteriormente en los ficheros de configuración.  <strong>IMAGEN2</strong></li>
+<li>
+Accedemos al fichero <strong>/etc/icecast2/icecast.xml</strong>
+<ul>
+<li>Primero modificamos las contraseñas y un usuario para administrarlo. <strong>IMAGEN3</strong></li>
+<li>Cambiamos también el nombre (previamente añadido en el servidor DNS) y el puerto con el que nos vamos a conectar desde un cliente. <strong>IMAGEN4</strong></li>
+</ul>
+</li>
+<li>Accedemos a <strong>/etc/default/icecast2</strong> y ponemos <strong>ENABLE=true</strong> <strong>IMAGEN5</strong></li>
+<li>Instalamos el paquete <strong>ffmpeg2theora</strong>.  <strong>IMAGEN6</strong></li>
+<li>Instalamos el paquete <strong>oggfwd</strong>.	<strong>IMAGEN7</strong></li>
+<li>
+<p>Tenemos que meter un video para reproducirlo, como  es un Ubuntu Server tendremos que montar un USB para acceder al él, porque lo habíamos descargado previamente.</p>
+<ul>
+<li>Lo montamos en un directorio previamente creado. <strong>IMAGEN8</strong></li>
+<li>Lo copiamos a la ubicación desde la que queramos ejecutarlo. <strong>IMAGEN9</strong></li>
+</ul>
+</li>
+<li>
+<p>Ejecutamos el comando para que <strong>empiece a reproducirse el video</strong>.  <strong>IMAGEN10</strong></p>
+</li>
+</ul>
+<h2>Comprobaciones</h2>
+<ul>
+<li>Desde el cliente accedemos con el navegador, indicando el nombre de dominio del servidor y el puerto.  <strong>IMAGEN11</strong></li>
+<li>Damos a Administración y nos logamos. <strong>IMAGEN12</strong></li>
+<li>Observamos la configuración. <strong>IMAGEN13</strong></li>
+<li>Desde el cliente observamos cómo se reproduce el video, que previamente hemos puesto a reproducir en el servidor.<strong>IMAGEN14</strong></li>
+</ul>
